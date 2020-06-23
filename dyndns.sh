@@ -2,10 +2,10 @@
 # Auteur : Belgotux
 # Site : http://www.monlinux.net
 # Adresse : belgotux@monlinux.net
-# Version : 1.0
+# Version : 1.0.1
 # Date : 23-06-20
 # Licence : Creative Commons CC-BY-NC-SA (https://creativecommons.org/licenses/by-nc-sa/4.0/) (ou GPLv3 https://www.gnu.org/licenses/gpl-3.0.html)
-# Description : Check changes of the public IP and use dyndns standard to renew the DNS if needed. Tested with OVH
+# Description : Check changes of the public IPv4 and use dyndns standard to renew the DNS if needed. Tested with OVH
 
 . /usr/local/etc/$(basename $0 .sh).conf
 
@@ -28,7 +28,7 @@ fi
 
 
 TIME=`date +'%d-%m-%Y %H:%M:%S'`
-myip=$(curl -s $website_return_ip)
+myip=$(curl -4 -s $website_return_ip)
 
 if [ $? != 0 ] ; then
         echo "$TIME Error to get an IP from $website_return_ip" | tee -a $log | tee -a $err 1>&2
