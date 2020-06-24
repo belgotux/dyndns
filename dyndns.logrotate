@@ -1,0 +1,7 @@
+/var/log/dyndns.log /var/log/dyndns.err {
+    weekly
+    rotate 8
+    compress
+    missingok
+    copytruncate
+}
