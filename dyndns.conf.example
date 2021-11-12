@@ -1,0 +1,13 @@
+### Common
+check_ip4=true
+check_ip6=true
+website_return_ip4="https://ifconfig.me"
+website_return_ip6="https://ifconfig.co"
+dns_resolver=1.1.1.1
+domain="myfakedyndnsdomain.monlinux.net"		# domain used for dynamic IP
+
+### OVH
+url_provider_dyndns_ip4="http://www.ovh.com/nic/update?system=dyndns"   #complete to update IPv4 (if not only notify by cron output)
+url_provider_dyndns_ip6=   #complete to update IPv6 (if not only notify by cron output)
+username="xxxxx"
+pass="xxxxx"
